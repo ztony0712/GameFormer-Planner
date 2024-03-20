@@ -1,0 +1,21 @@
+# Gameformer run
+lsof -i :5006
+kill -9 <PID>
+
+python run_nuplan_test.py \
+--experiment_name open_loop_boxes \
+--data_path /dataset/nuplan/nuplan-v1.1/splits/mini \
+--map_path /dataset/nuplan/dataset/maps \
+--model_path training_log/Exp1/model_epoch_20_valADE_1.8124.pth \
+--total_scenarios 2 \
+--shuffle_scenarios True
+
+# Leapfrog run
+
+python run_nuplan_test.py \
+--experiment_name open_loop_boxes \
+--data_path /dataset/nuplan/nuplan-v1.1/splits/mini \
+--map_path /dataset/nuplan/dataset/maps \
+--model_path /home/nuplan/LeapfrogAV/LED/results/led_augment/20231228-155409/models/model_0117.p \
+--total_scenarios 2 \
+--shuffle_scenarios True
