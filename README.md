@@ -1,3 +1,37 @@
+
+# GameFormer-Planner Simulation Pipeline
+The fork is a simulation pipline construction of gameformer for arc researchers who supervised by Chengran. The trainning process has been finished and stored in ```training_log/Exp1/model_epoch_20_valADE_1.8124.pth```. The run_nuplan_test.py is set properly with defualt parameters. The fork would also be helpful to fix the issuses in nuboard
+
+## How to start
+### 1. Installation
+Clone the simulation pipline by:
+```
+git clone https://github.com/ztony0712/GameFormer-Planner.git && cd GameFormer-Planner
+```
+The conda environment named 'gameformer' has been extracted to ```environment.yml``` file so that you can create it by running:
+```
+conda env create -f environment.yml
+```
+
+### 2. Run test program
+Now you can skip **Data process** and **Training** cause the model file is ready, but the nuplan-devkit is still necessary. The default value is adaptable before running the test script:
+```
+python run_nuplan_test.py
+```
+
+If you need to modify anything instead of using our ready-to-use model file, do follow the official procedure! There would be no problem in **Data process**, but you need to manually split the train and validation dataset before **Training**. A script ```split_train_cal.py``` is written to solve this. Change the processed data path to yours, and you can also change the split ratio.
+
+### 3. Repeat former experiences
+- You don't need to run ```split_train_cal.py``` again if you want to check the results from the former experiences. You can input ```nuboard``` in terminal to start the visual interface, then upload the .nuboard file in the testing_log folder.
+
+- If you can't initiate the nuboard, close every other nuboards in browser, stop corresponding programs in terminal and try again. Restart PC if those methods don't work.
+
+- Clear the testing_log every time before you update this pipline cause the files are too big to upload.
+
+### 4. Rendering video
+[Install Chrome Browser and Chromedriver Ubuntu 20.04](https://skolo.online/documents/webscrapping/#pre-requisites). These tools are crucial to rendering video.
+
+<font color="red" size="4">&#9888; IMPORTANT: The following part is the official readme! </font>
 # GameFormer-Planner
 This repository contains the code for the **innovation award** solution of the [nuPlan Planning Challenge](https://opendrivelab.com/AD23Challenge.html#Track4) at the CVPR'23 End-to-End Autonomous Driving Workshop. 
 
