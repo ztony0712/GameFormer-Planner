@@ -214,10 +214,10 @@ if __name__ == "__main__":
                                                       'closed_loop_reactive_agents'], help='experiment name', default='closed_loop_reactive_agents')
     parser.add_argument('--data_path', type=str, help='path to data', default='/media/nuplan/data2/dataset/nuplan/dataset/nuplan-v1.1/splits/mini')
     parser.add_argument('--map_path', type=str, help='path to nuplan maps', default='/media/nuplan/data2/dataset/nuplan/dataset/maps')
-    parser.add_argument('--model_path', type=str, help='path to model', default='/home/nuplan/GameFormer-Planner/training_log/Exp1/model_epoch_20_valADE_1.8124.pth')
+    parser.add_argument('--model_path', type=str, help='path to model', default='/home/nuplan/GameFormer-Planner/training_log/Exp1/model_epoch_20_valADE_2.9393.pth')
     parser.add_argument('--device', type=str, default='cuda', help='device to run model on')
     parser.add_argument('--scenarios_per_type', type=int, default=2, help='number of scenarios per type')
-    parser.add_argument('--total_scenarios', default=5, help='limit total number of scenarios')
+    parser.add_argument('--total_scenarios', default=2, help='limit total number of scenarios')
     parser.add_argument('--shuffle_scenarios', type=bool, default=True, help='shuffle scenarios')
     args = parser.parse_args()
 

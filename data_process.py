@@ -163,9 +163,9 @@ class DataProcessor(object):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Data Processing')
-    parser.add_argument('--data_path', type=str, help='path to raw data')
-    parser.add_argument('--map_path', type=str, help='path to map data')
-    parser.add_argument('--save_path', type=str, help='path to save processed data')
+    parser.add_argument('--data_path', type=str, help='path to raw data', default='/media/nuplan/data2/Datasets/nuplan/dataset/mini')
+    parser.add_argument('--map_path', type=str, help='path to map data', default='/media/nuplan/data2/Datasets/nuplan/dataset/maps')
+    parser.add_argument('--save_path', type=str, help='path to save processed data', default='/media/nuplan/data2/Datasets/gameformer_processed')
     parser.add_argument('--scenarios_per_type', type=int, default=1000, help='number of scenarios per type')
     parser.add_argument('--total_scenarios', default=None, help='limit total number of scenarios')
     parser.add_argument('--shuffle_scenarios', type=bool, default=False, help='shuffle scenarios')

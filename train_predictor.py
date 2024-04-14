@@ -179,9 +179,9 @@ if __name__ == "__main__":
     # Arguments
     parser = argparse.ArgumentParser(description='Training')
     parser.add_argument('--name', type=str, help='log name (default: "Exp1")', default="Exp1")
-    parser.add_argument('--train_set', type=str, help='path to train data')
-    parser.add_argument('--valid_set', type=str, help='path to validation data')
-    parser.add_argument('--seed', type=int, help='fix random seed', default=3407)
+    parser.add_argument('--train_set', type=str, help='path to train data', default='/media/nuplan/data2/Datasets/gameformer-v1.0/train')
+    parser.add_argument('--valid_set', type=str, help='path to validation data', default='/media/nuplan/data2/Datasets/gameformer-v1.0/test')
+    parser.add_argument('--seed', type=int, help='fix random seed', default=3407) # 3407
     parser.add_argument('--encoder_layers', type=int, help='number of encoding layers', default=3)
     parser.add_argument('--decoder_levels', type=int, help='levels of reasoning', default=2)
     parser.add_argument('--num_neighbors', type=int, help='number of neighbor agents to predict', default=10)
