@@ -33,8 +33,8 @@ def split_data_into_train_and_valid(src_folder, train_folder, valid_folder, spli
         shutil.move(src, dst)
 
 if __name__ == "__main__":
-    src_folder = os.path.expanduser("~/Projects/nuplan/processed_data/")
-    train_folder = os.path.expanduser("~/Projects/nuplan/processed_data/train")
-    valid_folder = os.path.expanduser("~/Projects/nuplan/processed_data/valid")
+    src_folder = os.path.expanduser("/media/nuplan/data2/Datasets/gameformer_processed")
+    train_folder = os.path.expanduser("/media/nuplan/data2/Datasets/gameformer-v1.0/train")
+    valid_folder = os.path.expanduser("/media/nuplan/data2/Datasets/gameformer-v1.0/test")
 
     split_data_into_train_and_valid(src_folder, train_folder, valid_folder, split_ratio=0.9)
